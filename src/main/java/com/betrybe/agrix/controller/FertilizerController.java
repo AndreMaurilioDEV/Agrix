@@ -53,7 +53,7 @@ public class FertilizerController {
    * @return the list
    */
   @GetMapping
-  @Secured("ROLE_ADMIN")
+  //@Secured("ROLE_ADMIN")
   public List<FertilizerDto> listFertilizers() {
     List<Fertilizer> fertilizerList = fertilizerService.listFertilizer();
     return fertilizerList.stream().map(FertilizerDto::fromEntity).toList();

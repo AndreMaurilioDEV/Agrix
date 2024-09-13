@@ -44,7 +44,7 @@ public class CropController {
    * @throws FarmNotFoundException the farm not found exception
    */
   @GetMapping
-  @Secured({"ROLE_MANAGER", "ROLE_ADMIN"})
+  //@Secured({"ROLE_MANAGER", "ROLE_ADMIN"})
   public List<CropDto> listCrops() throws FarmNotFoundException {
     List<Crop> cropList = cropService.listCrops();
     return cropList.stream().map(CropDto::fromEntity).toList();
