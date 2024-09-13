@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.security;
+package com.betrybe.agrix.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -48,6 +48,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(authorize -> authorize
                     .requestMatchers(HttpMethod.POST, "/persons").permitAll()
                     .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
+                    .anyRequest().authenticated()
             )
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
             .build();

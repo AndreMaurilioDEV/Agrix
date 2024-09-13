@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.security;
+package com.betrybe.agrix.security;
 
 import com.betrybe.agrix.ebytr.staff.service.PersonService;
 import com.betrybe.agrix.ebytr.staff.service.TokenService;
@@ -64,7 +64,6 @@ public class JwtFilter extends OncePerRequestFilter {
       SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 
-    // (6) continuamos com a cadeia de filtros de qualquer forma
     filterChain.doFilter(request, response);
   }
 }
