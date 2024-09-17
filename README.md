@@ -260,6 +260,14 @@ Agradecimento a todos que colaboraram com o projeto.
         </sub>
       </a>
     </td>
+        <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/82593112?v=4" width="100px;" alt="Trybe Profile Picture"/><br>
+        <sub>
+          <b>Trybe</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 
